@@ -1,0 +1,17 @@
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+  level:
+    com.itheima: debug
+spring:
+  rabbitmq:
+    host: 192.168.209.12
+    port: 5672
+    virtual-host: admintest
+    username: yu
+    password: yu
+    publisher-returns: true #开启返回确认
+    publisher-confirm-type: correlated #开启确认提示
+    # none：关闭confirm机制
+    # simple：同步阻塞等待MQ的回执
+    # correlated：MQ异步回调返回回执
